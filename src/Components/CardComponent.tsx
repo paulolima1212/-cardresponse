@@ -1,7 +1,7 @@
 import { useCardContext } from "../Context/CardsContext"
 
 interface CardProps{
-    dataText: string
+    contentFace2: string
     src: string
     alt: string
     title: string
@@ -14,7 +14,7 @@ interface ContextProps{
     setModalTitle: (string: string) => string;
 }
 
-export default function CardComponent({dataText, src, alt, title, content}: CardProps) {
+export default function CardComponent({contentFace2, src, alt, title, content}: CardProps) {
 
     const {setModalVisible, setModalContent, setModalTitle}:any = useCardContext()
 
@@ -25,8 +25,16 @@ export default function CardComponent({dataText, src, alt, title, content}: Card
         setModalTitle(title)
     }
 
+    function handleRezise() {
+        const card = document.querySelectorAll('div.face.face1')
+        card?.forEach((e) => {
+            console.log(e);
+            e.classList.toggle('active')
+        })
+    }
+
     return (
-        <div className="cardContainer">
+        <div className="cardContainer" onClick={() => handleRezise()}>
             <div className="card">
                 <div className="face face1" data-text={alt}>
                     <div className="content">
@@ -34,8 +42,8 @@ export default function CardComponent({dataText, src, alt, title, content}: Card
                     </div>
                 </div>
                 <div className="face face2">
-                    <div className="content">
-                        <h3>{title}</h3>
+                    <div className={contentFace2}>
+                        <h3 onClick={() => handleRezise()}>{title}</h3>
                         <p>{content}</p>
                         <a href="#" onClick={() => handleChangeModal()}>Read More</a>
                     </div>

@@ -90,7 +90,6 @@ body
         align-items: center;
         z-index: 1;
         transform-origin: bottom;
-        
 
         .content img 
         {
@@ -115,22 +114,28 @@ body
     .card:hover .face.face1
     {
         transform: translateY(-100%) rotateX(90deg);
-        background: #ff0057;
+        background: #d40000;
+        z-index: 2;
     }
 
     .card .face.face2
     {
-        background: #fff;
+        background: #505050;
         display: flex;
         justify-content: center;
         padding: 10px;
         transform-origin: top;
         transform: translateY(100%) rotateX(90deg);
 
-        .content h3 
+        .section1
+        {
+            z-index: 1;
+        }
+
+        .section1 h3 
         {
             margin: 3px 3px;
-            color: #000;
+            color: #fff;
             text-transform: uppercase;
             letter-spacing: 5px;
             text-align: center;
@@ -138,15 +143,17 @@ body
             font-weight: 800;
         }
 
-        .content p 
+        .section1 p 
         {
             font-size: 1rem;
             margin-bottom: 10px;
+            color: #fff;
         }
 
-        .content a 
+        .section1 a 
         {
             position: absolute;
+            margin-top: 10px;
             right: 8px;
             bottom: 8px;
             padding: 5px;
@@ -162,7 +169,56 @@ body
     .card:hover .face.face2
     {
         transform: translateY(0);
+        z-index: 1;
+        min-height: 250px;
+        height: auto;
+
+        .section1 p 
+        {
+            margin-bottom: 50px;
+        }
+
+        .section1 a 
+        {
+            margin-top: 10px;
+        }
     }
+    .card .face.face1.active{
+        z-index: -1;
+    }
+}
+
+.cardContainer.active
+{
+}
+
+.cardContainer:before{
+    content: '';
+    position: absolute;
+    top: -2;
+    bottom: -2;
+    left: -2;
+    right: -2;
+    background: #fff;
+    z-index: -1;
+}
+
+.cardContainer:after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background: #fff;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+.cardContainer:after,
+.cardContainer:before
+{
+    background: linear-gradient(235deg, #ff4800, #333, #d40000);
 }
 
 .modal 

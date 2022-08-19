@@ -14,8 +14,17 @@ export default function CardsRender() {
                 content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
                 Eveniet ducimus a cumque quia, dolores perspiciatis ipsa 
                 qui deserunt facilis quo fugiat explicabo aspernatur consequatur 
+                est autem praesentium nostrum, id similique!Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Eveniet ducimus a cumque quia, dolores perspiciatis ipsa 
+                qui deserunt facilis quo fugiat explicabo aspernatur consequatur 
+                est autem praesentium nostrum, id similique!Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Eveniet ducimus a cumque quia, dolores perspiciatis ipsa 
+                qui deserunt facilis quo fugiat explicabo aspernatur consequatur 
+                est autem praesentium nostrum, id similique!Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Eveniet ducimus a cumque quia, dolores perspiciatis ipsa 
+                qui deserunt facilis quo fugiat explicabo aspernatur consequatur 
                 est autem praesentium nostrum, id similique!"
-                dataText="Hot-Dog"
+                contentFace2="section1"
                 src="src/image/hotdog.png"
                 />
             <CardComponent 
@@ -25,7 +34,7 @@ export default function CardsRender() {
                 Eveniet ducimus a cumque quia, dolores perspiciatis ipsa 
                 qui deserunt facilis quo fugiat explicabo aspernatur consequatur 
                 est autem praesentium nostrum, id similique!"
-                dataText="Burger"
+                contentFace2="section1"
                 src="src/image/burger.svg"
                 />
             <CardComponent 
@@ -35,7 +44,7 @@ export default function CardsRender() {
                 Eveniet ducimus a cumque quia, dolores perspiciatis ipsa 
                 qui deserunt facilis quo fugiat explicabo aspernatur consequatur 
                 est autem praesentium nostrum, id similique!"
-                dataText="Drinks"
+                contentFace2="section1"
                 src="src/image/drink.png"
                 />
             <CardComponent 
@@ -45,7 +54,7 @@ export default function CardsRender() {
                 Eveniet ducimus a cumque quia, dolores perspiciatis ipsa 
                 qui deserunt facilis quo fugiat explicabo aspernatur consequatur 
                 est autem praesentium nostrum, id similique!"
-                dataText="Food"
+                contentFace2="section1"
                 src="src/image/food.png"
                 />
             {modalVisible && <Modal title={modalTitle} content={modalContent} />}
