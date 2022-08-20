@@ -5,7 +5,20 @@ interface CardProps{
     src: string
     alt: string
     title: string
-    content: string
+    content: {
+        description: [
+            {
+                prato1: string
+            },
+            {
+                prato2: string
+            },
+            {
+                prato3: string
+            }
+        ], 
+        price: string
+    }
 }
 
 interface ContextProps{
@@ -19,7 +32,6 @@ export default function CardComponent({contentFace2, src, alt, title, content}: 
     const {setModalVisible, setModalContent, setModalTitle}:any = useCardContext()
 
     function handleChangeModal(){
-        console.log(title);
         setModalVisible(true)
         setModalContent(content)
         setModalTitle(title)
@@ -28,13 +40,12 @@ export default function CardComponent({contentFace2, src, alt, title, content}: 
     function handleRezise() {
         const card = document.querySelectorAll('div.face.face1')
         card?.forEach((e) => {
-            console.log(e);
             e.classList.toggle('active')
         })
     }
 
     return (
-        <div className="cardContainer" onClick={() => handleRezise()}>
+        <div className="cardContainer" >
             <div className="card">
                 <div className="face face1" data-text={alt}>
                     <div className="content">
@@ -44,7 +55,11 @@ export default function CardComponent({contentFace2, src, alt, title, content}: 
                 <div className="face face2">
                     <div className={contentFace2}>
                         <h3 onClick={() => handleRezise()}>{title}</h3>
-                        <p>{content}</p>
+                        <br />
+                        <p>{content.description[0].prato1}</p>
+                        <p>{content.description[1].prato2}</p>
+                        <p>{content.description[2].prato3}</p>
+                        <p>{content.price}</p>
                         <a href="#" onClick={() => handleChangeModal()}>Read More</a>
                     </div>
                 </div>

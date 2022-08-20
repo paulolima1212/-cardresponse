@@ -6,54 +6,93 @@ export default function CardsRender() {
 
     const {modalVisible, modalTitle, modalContent }:any = useCardContext();
 
+    const content1 = {
+        description: [
+            {
+                prato1: "Moela de frango ao molho especial."
+            },
+            {
+                prato2: "Batata frita"
+            },
+            {
+                prato3: "Hamburguer da casa"
+            }
+        ],
+        price: "A partir de 3€"
+    }
+
+    const content2 = {
+        description: [
+            {
+                prato1: "Moela de frango ao molho especial."
+            },
+            {
+                prato2: "Batata frita"
+            },
+            {
+                prato3: "Hamburguer da casa"
+            }
+        ],
+        price: "A partir de 3€"
+    }
+
+    const content3 = {
+        description: [
+            {
+                prato1: "Moela de frango ao molho especial."
+            },
+            {
+                prato2: "Batata frita"
+            },
+            {
+                prato3: "Hamburguer da casa"
+            }
+        ],
+        price: "A partir de 3€"
+    }
+
+    const content4 = {
+        description: [
+            {
+                prato1: "Moela de frango ao molho especial."
+            },
+            {
+                prato2: "Batata frita"
+            },
+            {
+                prato3: "Hamburguer da casa"
+            }
+        ],
+        price: "A partir de 3€"
+    }
+
     return (
         <div className="cards">
             <CardComponent 
-                title="Hot-Dog"
-                alt="hotdog"
-                content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Eveniet ducimus a cumque quia, dolores perspiciatis ipsa 
-                qui deserunt facilis quo fugiat explicabo aspernatur consequatur 
-                est autem praesentium nostrum, id similique!Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Eveniet ducimus a cumque quia, dolores perspiciatis ipsa 
-                qui deserunt facilis quo fugiat explicabo aspernatur consequatur 
-                est autem praesentium nostrum, id similique!Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Eveniet ducimus a cumque quia, dolores perspiciatis ipsa 
-                qui deserunt facilis quo fugiat explicabo aspernatur consequatur 
-                est autem praesentium nostrum, id similique!Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Eveniet ducimus a cumque quia, dolores perspiciatis ipsa 
-                qui deserunt facilis quo fugiat explicabo aspernatur consequatur 
-                est autem praesentium nostrum, id similique!"
+                title="Petiscos Diversos"
+                alt="petiscos"
+                content={content1}
                 contentFace2="section1"
-                src="src/image/hotdog.png"
+                src="src/image/moela.webp"
                 />
             <CardComponent 
-                title="Burger"
-                alt="burger"
-                content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Eveniet ducimus a cumque quia, dolores perspiciatis ipsa 
-                qui deserunt facilis quo fugiat explicabo aspernatur consequatur 
-                est autem praesentium nostrum, id similique!"
+                title="Hot-Dog"
+                alt="hotdog"
+                content={content2}
                 contentFace2="section1"
-                src="src/image/burger.svg"
+                src="src/image/cachorro.jpg"
                 />
             <CardComponent 
                 title="Drinks"
                 alt="drinks"
-                content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Eveniet ducimus a cumque quia, dolores perspiciatis ipsa 
-                qui deserunt facilis quo fugiat explicabo aspernatur consequatur 
-                est autem praesentium nostrum, id similique!"
+                content={content3}
                 contentFace2="section1"
-                src="src/image/drink.png"
+                src="src/image/drinks.jpg"
                 />
             <CardComponent 
                 title="Food"
                 alt="food"
-                content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Eveniet ducimus a cumque quia, dolores perspiciatis ipsa 
-                qui deserunt facilis quo fugiat explicabo aspernatur consequatur 
-                est autem praesentium nostrum, id similique!"
+                content={content4}
                 contentFace2="section1"
                 src="src/image/food.png"
                 />
