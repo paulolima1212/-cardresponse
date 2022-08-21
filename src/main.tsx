@@ -2,9 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import '../src/Styles/CardComponent.scss'
+import { CardContextProvider } from './Context/CardsContext'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <CardContextProvider>
+      <App />
+    </CardContextProvider>
   </React.StrictMode>
 )

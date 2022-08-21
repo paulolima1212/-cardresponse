@@ -5,20 +5,8 @@ interface CardProps{
     src: string
     alt: string
     title: string
-    content: {
-        description: [
-            {
-                prato1: string
-            },
-            {
-                prato2: string
-            },
-            {
-                prato3: string
-            }
-        ], 
-        price: string
-    }
+    content: string
+    price: string
 }
 
 interface ContextProps{
@@ -56,10 +44,7 @@ export default function CardComponent({contentFace2, src, alt, title, content}: 
                     <div className={contentFace2}>
                         <h3 onClick={() => handleRezise()}>{title}</h3>
                         <br />
-                        <p>{content.description[0].prato1}</p>
-                        <p>{content.description[1].prato2}</p>
-                        <p>{content.description[2].prato3}</p>
-                        <p>{content.price}</p>
+                        <p>prato1</p>
                         <a href="#" onClick={() => handleChangeModal()}>Read More</a>
                     </div>
                 </div>
