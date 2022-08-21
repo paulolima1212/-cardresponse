@@ -33,20 +33,16 @@ export default function CardComponent({contentFace2, src, alt, title, content}: 
     }
 
     return (
-        <div className="cardContainer" >
-            <div className="card">
-                <div className="face face1" data-text={alt}>
-                    <div className="content">
-                        <img src={src} alt={alt}  />
-                    </div>
-                </div>
-                <div className="face face2">
-                    <div className={contentFace2}>
-                        <h3 onClick={() => handleRezise()}>{title}</h3>
-                        <br />
-                        <p>prato1</p>
-                        <a href="#" onClick={() => handleChangeModal()}>Read More</a>
-                    </div>
+        <div className="card">
+            <div className="face face1" data-text={alt}>
+                <img src={src} alt={alt}  />
+            </div>
+            <div className="face face2">
+                <div className={contentFace2}>
+                    <h3 onClick={() => handleRezise()}>{title}</h3>
+                    <br />
+                    <p>prato1</p>
+                    <a href="#" onClick={() => handleChangeModal()}>Read More</a>
                 </div>
             </div>
         </div>

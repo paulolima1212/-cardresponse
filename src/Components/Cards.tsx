@@ -9,7 +9,7 @@ export default function CardsRender() {
                 contentFace2="section1"
                 content="prato 1"
                 price="5€"
-                src="src/image/moela.webp"
+                src="src/image/drinks.jpg"
                 />
         </div>
     )
