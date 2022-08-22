@@ -1,9 +1,17 @@
 import { createContext, useContext, useState } from "react";
 
+interface CardContextTypes {
+    setModalVisible: () => boolean
+    modalVisible: boolean
+    setModalContent: () => void
+    setModalTitle: () => void
+    modalContent: string
+    modalTitle: string
+}
 
-const CardContext = createContext({});
+const CardContext = createContext<CardContextTypes | {}>({});
 
-export function CardContextProvider({children}: any) {
+export function CardContextProvider({children}: {children: JSX.Element}) {
     
     const [modalVisible, setModalVisible] = useState(false);
     const [modalTitle, setModalTitle] = useState('');

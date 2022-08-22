@@ -18,6 +18,7 @@ body
 }
 div 
 {
+    position: relative;
     display: flex;
     margin-top: 0;
     width: 100%;
@@ -31,6 +32,7 @@ div
 
 .main
 {
+    position: relative;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -91,6 +93,7 @@ div
                 border-radius: 15px;
                 width: 270px;
                 height: 500px;
+                object-fit: cover;
             }
         }
         .face.face2 
@@ -132,4 +135,139 @@ footer
 
 }
 
+.modal  
+{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15);
 
+    .frame-modal 
+    {
+        position: absolute;
+        height: 600px;
+        width: 300px;
+        background: #F3F3F3;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);    
+
+        input 
+        {
+            position: absolute;
+            left: 180px;
+            top: 550px;
+            width: 109px;
+            height: 27px;
+            background: #550404;
+            border-radius: 6px;
+            color: #fff;
+        }
+    }
+
+    img 
+    {
+        position: absolute;
+        left: 6.32%;
+        right: 63.29%;
+        top: 11.59%;
+        bottom: 55.73%;
+    }
+
+    .desc-modal 
+    {
+        position: absolute;
+        width: 137px;
+        height: 76px;
+        left: 153.68px;
+        top: 130.74px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13.615px;
+        line-height: 19px;
+        letter-spacing: 0.07em;
+    }
+
+    .teor-alcolico
+    {
+        position: absolute;
+        width: 126px;
+        height: 19px;
+        left: 153.68px;
+        top: 218.72px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 19px;
+        /* identical to box height */
+
+        letter-spacing: 0.07em;
+    }
+
+    .teorwheels
+    {
+        position: absolute;
+        width: 156.31px;
+        height: 22.46px;
+        left: 140px;
+        top: 250px;
+        background: transparent;
+        
+        #wheels1
+        {
+            position: absolute;
+            width: 30.89px;
+            height: 22.46px;
+            left: 0px;
+            top: -10px;
+        }
+        #wheels2
+        {
+            position: absolute;
+            width: 30.89px;
+            height: 22.46px;
+            left: calc(30px + 1%);
+            top: -10px;
+        }
+        #wheels3
+        {
+            position: absolute;
+            width: 30.89px;
+            height: 22.46px;
+            left: calc(60px + 1%);
+            top: -10px;
+        }
+        #wheels4
+        {
+            position: absolute;
+            width: 30.89px;
+            height: 22.46px;
+            left: calc(90px + 1%);
+            top: -10px;
+        }
+        #wheels5
+        {
+            position: absolute;
+            width: 30.89px;
+            height: 22.46px;
+            left: calc(120px + 1%);
+            top: -10px;
+        }
+    }
+}
+
+.title-modal
+{
+    position: absolute;
+    top: 15px;
+    padding: 5px;
+    width: 213px;
+    height: 34px;
+    background: #641B1B;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+}

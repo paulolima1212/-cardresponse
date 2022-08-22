@@ -1,8 +1,10 @@
 import CardComponent from "./CardComponent";
 
 export default function CardsRender() {    
+
     return (
         <div className="cards">
+
             <CardComponent 
                 title="Petiscos Diversos"
                 alt="petiscos"

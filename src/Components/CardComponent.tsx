@@ -17,12 +17,10 @@ interface ContextProps{
 
 export default function CardComponent({contentFace2, src, alt, title, content}: CardProps) {
 
-    const {setModalVisible, setModalContent, setModalTitle}:any = useCardContext()
+    const {setModalVisible}:any = useCardContext()
 
     function handleChangeModal(){
         setModalVisible(true)
-        setModalContent(content)
-        setModalTitle(title)
     }
 
     function handleRezise() {
@@ -34,7 +32,7 @@ export default function CardComponent({contentFace2, src, alt, title, content}: 
 
     return (
         <div className="card">
-            <div className="face face1" data-text={alt}>
+            <div className="face face1" data-text={alt} onClick={() => handleChangeModal()}>
                 <img src={src} alt={alt}  />
             </div>
             <div className="face face2">
