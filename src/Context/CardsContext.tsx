@@ -9,18 +9,25 @@ interface CardContextTypes {
     modalTitle: string
 }
 
+interface ModalProps{
+    'modalContent':{
+        title: string,
+        content: string,
+        src: string
+    }
+}
+
 const CardContext = createContext<CardContextTypes | {}>({});
 
 export function CardContextProvider({children}: {children: JSX.Element}) {
     
     const [modalVisible, setModalVisible] = useState(false);
-    const [modalTitle, setModalTitle] = useState('');
-    const [modalContent, setModalContent] = useState('');
+    const [modalContent, setModalContent] = useState({});
 
     return(
         <div>
             <CardContext.Provider value={
-                    {setModalVisible, modalVisible, setModalContent,  setModalTitle,modalContent,modalTitle}
+                    {setModalVisible, modalVisible, setModalContent ,modalContent}
             }>
                 {children}
             </CardContext.Provider>

@@ -2,7 +2,9 @@ import { useCardContext } from "../Context/CardsContext"
 
 export default function Modal() {
 
-    const {setModalVisible}:any = useCardContext()
+    const {setModalVisible, modalContent}:any = useCardContext()
+
+    console.log(modalContent);
 
     function handleCloseModal() {
         setModalVisible(false)
@@ -10,13 +12,9 @@ export default function Modal() {
     return (
         <div className="modal">
             <div className="frame-modal">
-                <h3 className="title-modal">PIÑA COLADA</h3>
-                <img src="src/image/pinacolada2.svg" alt="drink-pinacolada" />
-                <p className="desc-modal">
-                    RUM, LEITE DE 
-                    COCO E
-                    SUCO DE ABACAXI
-                </p>
+                <h3 className="title-modal">{modalContent.title}</h3>
+                <img src={modalContent.src} alt="drink-pinacolada" />
+                <p className="desc-modal">{modalContent.content}</p>
                 <p className="teor-alcolico">TEOR ALCÓLICO:</p>
                 <div className="teorwheels">
                     <img src="src/image/rodaactive.svg" alt="roda-carro" id="wheels1" />

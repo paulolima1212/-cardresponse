@@ -94,7 +94,7 @@ body
 {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,19 +105,20 @@ body
 .card 
 {
     position: relative;
-    width: 270px;
-    height: 500px;
+    width: 320px;
+    height: 600px;
     border-radius: 15px;
     overflow: hidden;
-    transform: perspective(270px) rotateY(0deg);
+    transform: perspective(320px) rotateY(0deg);
+    filter: drop-shadow(0px 4px 7px rgba(222, 0, 0, 0.47));
     
     .face 
     {
         position: absolute;
         top: 0;
         left: 0;
-        width: 270px;
-        height: 500px;
+        width: 320px;
+        height: 600px;
         transform-style: preserve-3d;
         display: flex;
         justify-content: center;
@@ -133,25 +134,26 @@ body
         img 
         {
             border-radius: 15px;
-            width: 270px;
-            height: 500px;
+            width: 320px;
+            height: 600px;
             object-fit: cover;
         }
     }
 
     &:hover .face.face1 
     {
-        transform: perspective(270px) rotateY(180deg);
+        transform: perspective(320px) rotateY(180deg);
     }
 
     .face.face2 
     {
-        position: relative;
+        position: absolute;
+        width: 100%;
+        height: 100%;
         background: #FDFFAA;
         flex-direction: column;
         overflow: scroll;
-        padding-top: 450px;
-        transform: perspective(270px) rotateY(180deg);
+        transform: perspective(320px) rotateY(180deg);
 
         .card-title 
         {
@@ -187,8 +189,15 @@ body
     }
     &:hover .face.face2 
     {
-        transform: perspective(270px) rotateY(360deg);
+        transform: perspective(320px) rotateY(360deg);
     }
+}
+
+.itemcard 
+{
+    width: 100%;
+    height: 100%;
+    padding-top: 60px;
 }
 
 .drink-face2
@@ -218,7 +227,7 @@ footer
 {
     display: flex;
     flex-direction: row;
-    width: 270px;
+    width: 320px;
 
     ul 
     {
@@ -245,13 +254,16 @@ footer
 .modal  
 {
     position: relative;
+    display: flex;
     height: 100vh;
     width: 100%;
     background: rgba(255, 255, 255, 0.15);
+    justify-content: center;
 
     .frame-modal 
     {
         position: absolute;
+        margin-top: 30px;
         height: 600px;
         width: 300px;
         background: #F3F3F3;
@@ -273,10 +285,12 @@ footer
     img 
     {
         position: absolute;
-        left: 6.32%;
+        left: 3px;
         right: 63.29%;
-        top: 11.59%;
+        top: 55px;
         bottom: 55.73%;
+        width: 150px;
+        height: 150px;
     }
 
     .desc-modal 
@@ -285,7 +299,7 @@ footer
         width: 137px;
         height: 76px;
         left: 153.68px;
-        top: 130.74px;
+        top: 80px;
         font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
@@ -300,7 +314,7 @@ footer
         width: 126px;
         height: 19px;
         left: 153.68px;
-        top: 218.72px;
+        top: 280px;
 
         font-family: 'Inter';
         font-style: normal;
@@ -318,7 +332,7 @@ footer
         width: 156.31px;
         height: 22.46px;
         left: 140px;
-        top: 250px;
+        top: 320px;
         background: transparent;
         
         #wheels1
@@ -368,12 +382,15 @@ footer
 {
     position: absolute;
     top: 15px;
+    left: 50px;
     padding: 5px;
     width: 213px;
     height: 34px;
     background: #641B1B;
     color: #fff;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     align-items: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
