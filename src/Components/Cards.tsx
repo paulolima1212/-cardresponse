@@ -4,10 +4,9 @@ export default function CardsRender() {
 
     return (
         <div className="cards">
-
             <CardComponent 
-                title="Petiscos Diversos"
-                alt="petiscos"
+                title="DRINKS"
+                alt="DRINKS"
                 contentFace2="section1"
                 content="prato 1"
                 price="5€"
